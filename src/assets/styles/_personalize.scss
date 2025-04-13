@@ -1,0 +1,6 @@
+$new-colors:(
+    "new-grey":#fafafa
+); 
+/* stylelint-disable-next-line scss/no-global-function-names */
+$theme-colors: map-merge($theme-colors, $new-colors);
+

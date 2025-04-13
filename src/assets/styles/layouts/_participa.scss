@@ -1,0 +1,61 @@
+main.container-f{
+    @include font-size-change("home");
+    @include body-container;
+
+    container-type: inline-size;
+    container-name: formulario;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "nombre"
+        "apellido"
+        "email"
+        "interes"
+        "boton";
+    gap: 1rem;
+    padding-bottom: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: aqua;
+}
+
+.cuadrao {
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.s-nombre{
+    grid-area: nombre;
+}
+
+.s-apellido {
+    grid-area: apellido;
+}
+
+.s-email {
+    grid-area: email;
+}
+
+.s-interes {
+    grid-area: interes;
+}
+
+.s-boton {
+    grid-area: boton;
+}
+
+// a paritr de 768px pongo dos columnas
+@container formulario (min-width: 48rem) {
+    .container-f {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "nombre apellido"
+            "email interes"
+            "boton boton";
+    }
+    .uno{
+        background-color: blue;
+        
+    }
+}

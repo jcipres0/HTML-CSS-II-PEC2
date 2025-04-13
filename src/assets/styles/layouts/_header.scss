@@ -1,0 +1,40 @@
+header {
+    @include head-foot;
+}
+
+.mispan {
+    @include font-size-change("header");
+
+    background: linear-gradient(135deg,#67b26f,#66b274 9.99%,#64b27f 19.07%,#62b28f 27.44%,#5eb1a1 35.26%,#59b1b3 42.72%,#54b1c5 50%,#4fb1d5 57.28%,#4ab1e3 64.74%,#45b0ee 72.56%,#40b0f7 80.93%,#3db0fd 90.01%,#3cb0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    margin: 0 auto;
+}
+
+.logo {
+    @include logo-size-change;
+}
+
+@media (min-width: 62rem) {
+    .menu li {
+        margin-left: 2rem;
+    }
+    
+    .menu a{
+        border-bottom: 0.3rem solid;
+    }
+
+    .menu a:hover{
+        transform: translate(-5%, -5%) scale(1.1);
+        transition: 0.5 linear;
+        color:$bk-aux2;
+    }
+}
+
+@supports (font-size: clamp(1rem, 4vw, 2.7rem)) {
+    .mispan{
+        font-size: clamp(1rem, 4vw, 2.7rem);
+    }
+}

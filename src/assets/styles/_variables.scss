@@ -1,12 +1,61 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// fuente poppins light (300) para cuerpo
+@font-face {
+  font-family: Poppins-Light;
+  src:    url("../../assets/fonts/Poppins-Light.woff2") format("woff2"),
+          url("../../assets/fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+}
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// fuente poppins bold (700) para cuerpo
+@font-face {
+  font-family: Poppins-Bold;
+  src:    url("../../assets/fonts/Poppins-Bold.woff2") format("woff2"),
+          url("../../assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+}
 
-$mqMinWidth: 420px;
+// fuente arvo regular (400) para cabeceras
+@font-face {
+  font-family: Arvo-Rgular;
+  src:    url("../../assets/fonts/Arvo.woff2") format("woff2"),
+          url("../../assets/fonts/Arvo.woff") format("woff");
+}
+
+// VARIABLES PARA FUENTES
+
+// por si hubiera algún problema con poppins o arvo dejo las de  por defecto según SO o navegador
+$font-family-sans-serif: "Poppins-Light", -apple-system, blinkmacsystemfont, 
+  "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif-bold: "Poppins-Bold", -apple-system, blinkmacsystemfont, 
+  "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-serif: "Arvo-Regular", "Georgia", "Times New Roman", serif;
+$font-large: 2.6rem;
+$font-medium: 2rem;
+$font-small: 1.5rem;
+$font-x-small: 1.2rem;
+$font-small-h1: 1rem;
+$font-large-h1: 3rem;
+
+// VARIABLES PARA COLORES
+
+$bk-primary: #fafafa;
+$bk-secondary: color.scale($bk-primary, $lightness: -5%);
+$bk-aux1: #30af09ee;
+$bk-aux2: #3cb0ff;
+$bk-recipe: #d4af3780;
+$color-hover: #664606ba;
+
+// VARIABLES PARA RESOLUCION DE PANTALLA
+
+$size-screen0: 25rem;
+$size-screen1: 34rem;
+
+// resolución de 768px
+$size-screen2: 48rem;
+
+// resolución de 1024px
+$size-screen3: 74rem;

@@ -1,0 +1,58 @@
+
+main.container-p{
+    @include font-size-change("home");
+    @include body-container;
+
+    container-type: inline-size;
+    container-name: speakers;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 10rem;
+}
+
+.card {
+    width: 13rem;
+}
+
+.container :is(img){
+    border-radius: 0.5rem;
+}
+
+.under {
+    background: linear-gradient(to right, #a8e6cf, #dcedc1);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+@supports (font-size: clamp(0.9rem, 2.2vw, 2.2rem)) {
+    .under{
+        font-size: clamp(0.9rem, 2.2vw, 2.2rem);
+    }
+}
+
+@container speakers (min-width: 38rem){
+ /*    main.container-p {
+        gap: 3rem;
+        padding-bottom: 6rem;
+    } */
+
+    .container-p h1 {
+        flex-basis: 100%; 
+        text-align: center;
+        margin-bottom: 2.5rem; 
+      }
+
+    .card {
+        width: 16rem;
+    }
+
+    .card-text{
+        color: $bk-aux1;
+    }
+}
+
+
