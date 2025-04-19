@@ -33,8 +33,8 @@ header {
     }
 }
 
-@supports (font-size: clamp(1rem, 4vw, 2.7rem)) {
+@supports (font-size: clamp(1.2rem, 3vw, 2.7rem)) {
     .mispan{
-        font-size: clamp(1rem, 4vw, 2.7rem);
+        font-size: clamp(1.2rem, 3vw, 2.7rem);
     }
 }

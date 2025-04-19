@@ -1,0 +1,78 @@
+.body-contenido{
+    container-type: inline-size;
+    container-name: programa
+}
+
+main.container-cc {
+    @include font-size-change("home");
+    @include body-container;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.container-cc img{
+    width: 100%;
+    max-width: 55rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.container-cc .compone{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "texto"
+        "carrusel";
+}
+   
+
+//PRECISAMENTE AQUÍ PUEDO APLICAR LAYERS PORQUE REALMENTE EL FONT-SIZE-CHANGE JUEGA
+//CON EL EL TEXTO FUERA DE CONTAINER Y NO ES LO MISMO LA RESOLUCION DEL
+//CONTAINER QUE LA RESOLUCION DE PANTALLA
+
+
+.texto {
+    grid-area: texto;
+}
+
+.carousel {
+    grid-area: carrusel;
+}
+
+.under2 {
+    color: $bk-aux1;
+    background: linear-gradient(to right, #a8e6cf, #dcedc1);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+}
+
+@supports (font-size: clamp(0.9rem, 1.7vw, 2.2rem)) {
+    .under2{
+        font-size: clamp(0.9rem, 1.7vw, 2.2rem);
+    }
+}
+
+@container programa (min-width: 38rem){
+    .container-cc {
+        padding: 0 2rem;
+    }
+
+    .container-cc .compone {
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: 
+            "carrusel texto";  
+        gap: 3rem;
+    }
+}
+
+@container programa (min-width: 75rem){
+    .container-cc .compone {
+        padding: 5rem;  
+    } 
+}

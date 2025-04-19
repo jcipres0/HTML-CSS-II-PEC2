@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+.body-index {
+  container-type: inline-size;
+  container-name: componer;
+  height: 100%;
+}
+
 main.container-i {
   @include font-size-change("home");
   @include body-container;
 
-  container-type: inline-size;
-  container-name: componer;
+  height: 80svh;
 }
 
 .collage img {
@@ -21,11 +26,20 @@ main.container-i {
   margin-bottom: 2rem;
 }
 
+.lateral{
+  text-align: center;
+  color: $bk-secondary;
+  background-color: $bk-aux1;
+}
+
 @container componer (min-width: 38rem) {
+  main.container-i{
+    height: 75svh;  
+  }
+  
   .collage {
-    margin-top:4rem;
     display: grid;
-    grid-template-columns: 3fr 3fr 0.5fr;
+    grid-template-columns: 2.5fr 3fr 0.5fr;
     grid-template-rows: auto auto 1fr;
     gap: 1rem;
   }
@@ -55,7 +69,7 @@ main.container-i {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: $font-small;
     writing-mode: vertical-rl;
     color: $bk-secondary;
     background-color: $bk-aux1;

@@ -2,13 +2,13 @@ footer{
     @include head-foot;
     @include font-size-change("footer");
 
-    background-color: $bk-secondary;
+   //  background-color: $bk-secondary;
 }
 
 .logof {
     @include logo-size-change;
 
-    max-height: 4rem;
+    max-height: 3rem;
 }
 
 .fab{

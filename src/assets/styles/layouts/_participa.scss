@@ -1,9 +1,27 @@
-main.container-f{
-    @include font-size-change("home");
-    @include body-container;
+@layer inicial, mantiene;
 
+.body-participa{
     container-type: inline-size;
     container-name: formulario;
+}
+
+@layer inicial {
+    .container-f{
+        @include font-size-change("home");
+       
+        /* @include body-container; */
+
+        height: 100svh;   
+    }
+}
+
+.container-f {
+     max-width: 75rem;
+     width: 100%;
+    margin: 0 auto;
+}
+
+.cuadrao {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -12,17 +30,8 @@ main.container-f{
         "email"
         "interes"
         "boton";
-    gap: 1rem;
-    padding-bottom: 10rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: aqua;
-}
-
-.cuadrao {
-    border: 1px solid blue;
-    border-radius: 5px;
-    padding: 1rem;
 }
 
 .s-nombre{
@@ -45,17 +54,40 @@ main.container-f{
     grid-area: boton;
 }
 
-// a paritr de 768px pongo dos columnas
-@container formulario (min-width: 48rem) {
-    .container-f {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            "nombre apellido"
-            "email interes"
-            "boton boton";
+.under1 {
+    color: #00f;
+    background: linear-gradient(to right, #72c0f1, #13ebf3);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+}
+
+@supports (font-size: clamp(0.9rem, 1.7vw, 2.2rem)) {
+    .under1{
+        font-size: clamp(0.9rem, 1.7vw, 2.2rem);
     }
-    .uno{
-        background-color: blue;
-        
+}
+
+@layer mantiene {
+    // a paritr de 768px pongo dos columnas
+    @container formulario (min-width: 48rem) {
+        .cuadrao {
+            font-size: 0.8rem;
+            padding-top: 5rem;        
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-areas: 
+                "nombre apellido"
+                "email interes"
+                "boton boton";
+        }
+    
+        .cuadrao p{
+            padding-right: 2rem;
+        }
+    
+        .formulario :is(.compo){
+            margin-bottom: 1rem;
+         
+        }
     }
 }
