@@ -12,30 +12,35 @@
   </head>
   <body class="bg-new-grey body-contenido">
     <include src="./views/header.html"></include>
-    <main class="container-cc">
-      <h1 class="mx-auto text-center mb-3"><mark class="under2">Conoce las jornadas de economía circular</mark></h1>
-      <img src="assets/images/circular-1080px.webp" alt="grafico circular">
-      <div class="compone mt-4">
-        <div class="texto">
-          <p>Desde el <strong>Ayto.de OZ</strong> consideramos que el objetivo no debe centrarse en la gestión de los residuos, sino en cambiar el modelo para eliminar el concepto de residuos y tratarlo como nuevas materias primas, y eso implica mucho más que reciclar. En estas jornadas queremos profundizar en las oportunidades que aporta la Economía Circular en el área de Residuos y ofrecer ejemplos prácticos que se puedan implementar.</p>
+    <main class="body-contenido__container-cc">
+      <h1 class="mx-auto text-center mb-3"><mark class="body-contenido__titulo--personalizado">Conoce las jornadas de economía circular</mark></h1>
+      <section class="body-contenido__seccion">
+        <img class="body-contenido__imagen" src="assets/images/circular-1080px.webp" alt="grafico circular">
+      </section>
+      <section class="body-contenido__seccion mt-4">
+        <p>APUNTATE CUANTO ANTES, LAS PLAZAS SON LIMITADAS!!</p>
+      </section>
+      <section class="body-contenido__compone body-contenido__seccion">
+        <div class="body-contenido__texto">
+          <p>Desde el Ayto.de OZ queremos profundizar en las oportunidades que aporta la Economía Circular en el área de Residuos y ofrecer ejemplos prácticos que se puedan implementar y, tal como diría Richard Smith, uno de nuestros ponentes: <blockquote class="body-contenido__cita"> "El objetivo no debe centrarse en la gestión de los residuos, sino en cambiar el modelo para eliminar el concepto de residuos y tratarlo como nuevas materias primas, y eso implica mucho más que reciclar."</blockquote></p>
           <p><u>Los temas a tratar en estas jornadas serán:</u></p>
           <ul>
-            <li>Soluciones para los Residuos desde la Economía Circular.</li>
-            <li>Legislación sobre Residuos y Economía Circular.</li>
-            <li>Aprovechamiento energético de residuos.</li>
-            <li>Biorrefinerías: Aprovechamiento de subproductos.</li>
-            <li>De residuos agrícolas a producto innovador.</li>
+            <li class="body-contenido__item">Soluciones para los Residuos desde la Economía Circular.</li>
+            <li class="body-contenido__item body-contenido__item--importante">Legislación sobre Residuos y Economía Circular (importante).</li>
+            <li class="body-contenido__item">Aprovechamiento energético de residuos.</li>
+            <li class="body-contenido__item">Biorrefinerías: Aprovechamiento de subproductos.</li>
+            <li class="body-contenido__item">De residuos agrícolas a producto innovador.</li>
           </ul>
         </div>
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleInterval" class="carousel slide body-contenido__carrusel" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
+            <div class="carousel-item active" data-bs-interval="3000">
               <img src="./assets/images/infografia-1-1.webp" class="img-fluid d-block w-100" alt="infografia-1-1">
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img src="./assets/images/infografia-2-2.webp" class="d-block w-100" alt="infografia-2-2">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
               <img src="./assets/images/infografia-3-3.webp" class="d-block w-100" alt="infografia-3-3">
             </div>
           </div>
@@ -48,7 +53,8 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+      </section>
+    
     </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

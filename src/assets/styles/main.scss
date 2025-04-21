@@ -10,9 +10,9 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
+@import "personalize";
 @import "variables";
 @import "shares";
-@import "personalize";
 
 
 /**
@@ -21,7 +21,6 @@
  * see commented examples below
  */
  // @import "bootstrap/scss/bootstrap";
-
  @import "../../../node_modules/bootstrap/scss/bootstrap";
  @import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 

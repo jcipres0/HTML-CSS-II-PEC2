@@ -1,16 +1,14 @@
-footer{
+.mi-footer{
     @include head-foot;
     @include font-size-change("footer");
-
-   //  background-color: $bk-secondary;
 }
 
-.logof {
+.mi-footer__logof {
     @include logo-size-change;
 
     max-height: 3rem;
 }
 
-.fab{
-    color: $bk-aux1;;
+.mi-footer__iconos--verdes{
+    color: $bk-aux1;
 }

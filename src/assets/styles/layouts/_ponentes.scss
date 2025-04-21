@@ -3,7 +3,7 @@
     container-name: speakers;
 }
     
-main.container-p{
+.body-ponentes__container-p{
     @include font-size-change("home");
     @include body-container;
 
@@ -15,20 +15,20 @@ main.container-p{
     width: 100%;
 }
     
-.card {
+.body-ponentes__tarjeta {
     width: 13rem;
 }
 
-.card-text{
+.body-ponentes__texto{
     font-size: 0.7rem;
     color: $bk-aux1;
 }
 
-.container :is(img){
-    border-radius: 2.5rem;
+.body-ponentes__container-p :is(.body-ponentes__imagen, .body-ponentes__tarjeta){
+    border-radius: 3rem;
 }
 
-.under {
+.body-ponentes__titulo--personalizado {
     color: #ffe600;
     background: linear-gradient(to right, #c7633b, #ecd19b);
     border-radius: 0.5rem;
@@ -38,28 +38,28 @@ main.container-p{
 
 
 @supports (font-size: clamp(0.9rem, 1.7vw, 2.2rem)) {
-    .under{
+    .body-ponentes__titulo--personalizado{
         font-size: clamp(0.9rem, 1.7vw, 2.2rem);
     }
 }
     
 @container speakers (min-width: 38rem){
-    main.container-p{
+    .body-ponentes__container-p{
         gap: 3rem;
         padding-bottom: 6rem;
     }
     
-    .container-p h1 {
+    .body-ponentes__titulo {
         flex-basis: 100%;
         text-align: center;
         margin-bottom: 2.5rem;
     }
     
-    .card {
+    .body-ponentes__tarjeta {
         width: 14rem;
     }
     
-    .card-text{
+    .body-ponentes__texto{
         font-size: 1rem;
         color: $bk-aux1;
     }
